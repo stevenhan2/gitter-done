@@ -1,4 +1,1 @@
-gitter-done
-===========
-
-Automatic git commits/pushes
+**gitter-done** helps you get those green squares that everyone loves.
