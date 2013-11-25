@@ -27,9 +27,10 @@ if (( decision <= OCCURRENCES )); then
 
 	echo "#$RANDOM $RANDOM $RANDOM $RANDOM" >> $script_dir/$script_name
 
+	cd $script_dir
 	git add -A
 	git commit -m "${COMMIT_MESSAGES[$random_index]}"
 	git push origin master
 fi
 
-#5267 30934 25449 8371
+#32491 7986 11293 25301
