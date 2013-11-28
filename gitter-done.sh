@@ -11,11 +11,10 @@ SSH_KEY=/root/.ssh/git_rsa
 # Logic
 # ##############################
 
-eval `ssh-agent`
-ssh-add $SSH_KEY
-
 (( decision = RANDOM % OUT_OF + 1 ))
 if (( decision <= OCCURRENCES )); then
+	eval `ssh-agent`
+	ssh-add $SSH_KEY
 
 	messages_length=${#COMMIT_MESSAGES[@]} 
 
@@ -38,4 +37,4 @@ if (( decision <= OCCURRENCES )); then
 fi
 exit 0
 
-#13939 14876 14524 18987
+#11594 454 9283 16213
