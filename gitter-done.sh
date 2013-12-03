@@ -3,7 +3,7 @@
 # Config
 # ##############################
 
-OCCURRENCES=7
+OCCURRENCES=4
 OUT_OF=7
 COMMIT_MESSAGES=("Minor changes" "Changed configuration"  "Bug fixes"  "Resolved caching issue"  "Bug fixed."  "Small changes"  "Added documentation."  "Organized code"  "Rewrote section")
 SSH_KEY=/root/.ssh/git_rsa
@@ -37,4 +37,4 @@ if (( decision <= OCCURRENCES )); then
 fi
 exit 0
 
-#18198 6357 22566 17180
+#28846 17074 19302 12100
