@@ -3,15 +3,18 @@
 # Config
 # ##############################
 
-OCCURRENCES=5
+OCCURRENCES=4
 OUT_OF=7
 COMMIT_MESSAGES=("Minor changes" "Changed configuration"  "Bug fixes"  "Resolved caching issue"  "Bug fixed."  "Small changes"  "Added documentation."  "Organized code"  "Rewrote section")
+SSH_KEY=/root/.ssh/git_rsa
 
 # Logic
 # ##############################
 
 (( decision = RANDOM % OUT_OF + 1 ))
 if (( decision <= OCCURRENCES )); then
+        eval `ssh-agent`
+        ssh-add $SSH_KEY
 
         messages_length=${#COMMIT_MESSAGES[@]} 
 
@@ -32,5 +35,6 @@ if (( decision <= OCCURRENCES )); then
         git commit -m "${COMMIT_MESSAGES[$random_index]}"
         git push origin master
 fi
+exit 0
 
-#29111 22381 25243 13160
+#9399 29616 19627 31522
