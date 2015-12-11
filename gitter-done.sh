@@ -37,4 +37,4 @@ if (( decision <= OCCURRENCES )); then
 fi
 exit 0
 
-#20360 919 13518 18260
+#19172 17990 11398 15262
